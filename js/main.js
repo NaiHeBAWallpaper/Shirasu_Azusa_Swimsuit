@@ -39,7 +39,7 @@ const AUDIO_DETAIL = [
 	{
 		time: 11000,
 		count: 2,
-		startTimes: [300, 2800],
+		startTimes: [300, 2950],
 		dialog: {
 			Japanese: [
 				"わぁ……！",
@@ -58,7 +58,7 @@ const AUDIO_DETAIL = [
 	{
 		time: 12000,
 		count: 2,
-		startTimes: [2500, 9500],
+		startTimes: [2700, 9400],
 		dialog: {
 			Japanese: [
 				"何にも邪魔されずに、こうして何もかもを見渡せる場所があったなんて……。",
@@ -76,7 +76,7 @@ const AUDIO_DETAIL = [
 	{
 		time: 12000,
 		count: 2,
-		startTimes: [500, 8000],
+		startTimes: [800, 7900],
 		dialog: {
 			Japanese: [
 				"元々、こういう開けた場所はあまり好きじゃなかった。",
@@ -95,7 +95,7 @@ const AUDIO_DETAIL = [
 	{
 		time: 11000,
 		count: 2,
-		startTimes: [500, 6500],
+		startTimes: [700, 6300],
 		dialog: {
 			Japanese: [
 				"でも今は……全然不安じゃない。",
@@ -114,7 +114,7 @@ const AUDIO_DETAIL = [
 	{
 		time: 12000,
 		count: 2,
-		startTimes: [500, 7000],
+		startTimes: [700, 7200],
 		dialog: {
 			Japanese: [
 				"今の私の視界には、いつもこうやって……",
@@ -212,7 +212,12 @@ function playVoiceline() {
 
 	const timeout1 = setTimeout(function () {
 		acceptingClick = true;
-		currentVoiceline = clamp(currentVoiceline + 1, 0, AUDIO_DETAIL.length);
+		// 当达到末尾时循环回到第一句
+		if (currentVoiceline >= AUDIO_DETAIL.length) {
+			currentVoiceline = 1;
+		} else {
+			currentVoiceline = currentVoiceline + 1;
+		}
 	}, trackDetails.time);
 	voicelineTimeouts.push(timeout1);
 
