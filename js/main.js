@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 
 const CHARACTER = 'Azusa_swimsuit';
@@ -59,24 +60,25 @@ const AUDIO_DETAIL = [
 		dialog: {
 			Japanese: [
 				"わぁ……！",
-				"こんなの初めて…… 目に映る全部がキラキラして、すごい……"
+				"こんなの初めて……目に映る全部がキラキラして、すごい……"
 			],
 			English: [
-				"Wow...!",
+				"Wow...",
 				"I've never seen so many shining and beautiful things at once before... It's amazing!"
 			],
 			Chinese: [
-				"哇……！",
-				"第一次见到这样的景象……映入眼帘的全部都闪闪发光，真漂亮……"
+				"哇……",
+				"我还是第一次看到，眼前的一切都闪闪发光……好漂亮……"
 			],
 			TraditionalChinese: [
-				"哇……！",
+				"哇……",
 				"我第一次看到這種景色……眼前的東西全都閃閃亮亮的，太厲害了……"
 			],
 			Korean: [
-				"와우!",
+				"와……",
 				"이런 건 처음이야…… 눈에 비치는 게 전부 반짝반짝…… 굉장해……"
-			]
+			],
+			Thai: ["ว้าว...","ฉันเพิ่งเคยเห็นเลย ที่ที่เป็นประกาย และสวยแบบนี้ วิเศษไปเลย"]
 		}
 	},
 	{
@@ -88,11 +90,11 @@ const AUDIO_DETAIL = [
 			],
 			English: [
 				"I can see everything in just a glance here. Nothing is in the way.",
-				"Interesting. I've never felt this way before."
+				"I've...never felt this way before."
 			],
 			Chinese: [
-				"居然能看到这样没有任何遮挡物，一眼就能望穿的地方……。",
-				"总觉得不可思议……"],
+				"现在竟然可以不受任何干扰，把一切美景尽收眼底……",
+				"好神奇……"],
 			TraditionalChinese: [
 				"居然有像這樣，完全沒有任何阻礙，一望無盡的地方……",
 				"有種，不可思議的感覺……"
@@ -100,7 +102,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"이렇게 방해받지 않고, 전부 내다볼 수 있는 장소가 있었다니…….",
 				"뭔가……. 신기한 느낌……"
-			]
+			],
+			Thai: ["ฉันมองเห็นทุกอย่างได้... โดยไม่มีอะไรมาขวางเลย...","มันรู้สึก... น่าแปลกใจจริงๆ นะ.."]
 		}
 	},
 	{
@@ -111,12 +114,12 @@ const AUDIO_DETAIL = [
 				"隠れる場所も無いし、周囲の警戒も大変で……"
 			],
 			English: [
-				"Actually, I don't like locations being this exposed.",
+				"Typically, I wouldn't like such an exposed location.",
 				"There's nowhere to take cover and securing the perimeter is difficult."
 			],
 			Chinese: [
-				"我以前不太喜欢这样开放的地方。",
-				"没有隐藏的地方，警戒四周也很难……"
+				"其实，我不怎么喜欢这种地方，太开阔了。",
+				"没有地方可以藏身……想对四周保持警戒也很困难……"
 			],
 			TraditionalChinese: [
 				"照理說，像這種遼闊的地方我不是很喜歡。",
@@ -125,7 +128,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"사실 이렇게 탁 트인 위치는 별로 좋아하지 않았어.",
 				"숨을 곳도 없고…… 주변 경계도 힘들고……."
-			]
+			],
+			Thai: ["ที่จริง... ฉันไม่ค่อยชอบ พื้นที่เปิดโล่งแบบนี้เท่าไร","ไม่มีสถานที่ให้ซ่อนตัว... แถมเฝ้าระวังบริเวณรอบๆ ก็ยาก"]
 		}
 	},
 	{
@@ -140,8 +144,8 @@ const AUDIO_DETAIL = [
 				"So maybe...this is... Right."
 			],
 			Chinese: [
-				"但是如今……完全没有不安的感觉……",
-				"这一定是因为，嗯……"
+				"不过现在……我一点都不紧张。",
+				"我想，这一定是因为……嗯……"
 			],
 			TraditionalChinese: [
 				"但是現在……完全沒有感到不安。",
@@ -150,7 +154,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"그치만 지금은……. 불안하지 않아.",
 				"분명, 이건……. 응……."
-			]
+			],
+			Thai: ["แต่ว่าตอนนี้... ฉันไม่ได้กังวลเรื่องพวกนั้นเลย","คงเป็นเพราะ... แบบนี้... อืม..."]
 		}
 	},
 	{
@@ -165,8 +170,8 @@ const AUDIO_DETAIL = [
 				"...I have Sensei in my sights."
 			],
 			Chinese: [
-				"可能是因为，现在我目所能及的地方，一直都能看见……",
-				"……老师的存在吧。"
+				"现在……在我的视野中，能一直看到……",
+				"……老师的身影吧。"
 			],
 			TraditionalChinese: [
 				"現在我的視野裡，總是像這樣……",
@@ -175,7 +180,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"지금의 내 시야에는, 항상 이렇게…….",
 				"……선생님이 보이고 있으니까."
-			]
+			],
+			Thai: ["เพราะตอนนี้ฉันมองเห็น ทุกอย่างได้เต็มสองตาไงล่ะ","แล้วก็เพราะมีคุณครู อยู่ด้วย..."]
 		}
 	}
 ];
@@ -286,7 +292,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -456,6 +462,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -469,6 +485,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -478,7 +496,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
